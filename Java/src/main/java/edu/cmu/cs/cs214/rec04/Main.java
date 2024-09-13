@@ -18,11 +18,9 @@ public class Main {
 
         InheritanceSortedIntList list1;
         InheritanceSortedIntList list2;
-        InheritanceSortedIntList list3;
 
         list1 = new InheritanceSortedIntList();
         list2 = new InheritanceSortedIntList();
-        list3 = new InheritanceSortedIntList();
 
         // add 5 elements to our first list.
         list1.add(1);
@@ -32,30 +30,17 @@ public class Main {
         list1.add(2);
 
         printList(list1);
-
-        list1.remove(4);
-
-        printList(list1);
         System.out.println(list1.getTotalAdded());
 
         // add 2 elements to a second list.
         list2.add(3);
         list2.add(0);
 
+
         // add the first list (5 elements) to our second list (2 elements).
         list2.addAll(list1);
 
         printList(list2);
-        System.out.println(list2.size());
-        System.out.println(list2.getTotalAdded());
-
-        list3.add(0);
-        list3.add(1);
-
-        list2.removeAll(list3);
-
-        printList(list2);
-        System.out.println(list2.size());
         System.out.println(list2.getTotalAdded());
     }
 
@@ -68,6 +53,6 @@ public class Main {
             System.out.print(list.get(i));
             System.out.print(", ");
         }
-        System.out.println();
+        System.out.println(list.size());
     }
 }
